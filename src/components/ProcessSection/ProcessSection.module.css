@@ -1,0 +1,116 @@
+.section {
+  padding-block: var(--space-24);
+  background: var(--color-bg);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+}
+
+.step {
+  position: relative;
+}
+
+/* Connector line between steps (desktop only) */
+.connector {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .connector {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: calc(100% - 28px);
+    width: calc(56px);
+    height: 2px;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    z-index: 0;
+    border-radius: var(--radius-full);
+  }
+}
+
+.stepInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  transition: all var(--transition-base);
+}
+
+@media (min-width: 768px) {
+  .stepInner {
+    margin-inline: var(--space-4);
+  }
+}
+
+.stepInner:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.iconWrap {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  background: rgba(158, 98, 64, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  transition: background var(--transition-base);
+}
+
+.stepInner:hover .iconWrap {
+  background: var(--color-primary);
+  color: white;
+}
+
+.iconWrap svg {
+  width: 32px;
+  height: 32px;
+}
+
+.stepNumber {
+  font-family: var(--font-serif);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.stepTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.stepDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
