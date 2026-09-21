@@ -51,11 +51,11 @@ export default function Header() {
       <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`} role="banner">
         <div className={`container ${styles.inner}`}>
           {/* Logo */}
-          <Link to="/" className={styles.logo} aria-label="Mob Atidol – Acasă">
-            <span className={styles.logo__icon} aria-hidden="true">M</span>
+          <Link to="/" className={styles.logo} aria-label="AttilaMobDesign – Acasă">
+            <span className={styles.logo__icon} aria-hidden="true">A</span>
             <span className={styles.logo__text}>
-              <span className={styles.logo__brand}>Mob Atidol</span>
-              <span className={styles.logo__tagline}>Mobilier la comandă</span>
+              <span className={styles.logo__brand}>AttilaMobDesign</span>
+              <span className={styles.logo__tagline}>MobAtidor</span>
             </span>
           </Link>
 

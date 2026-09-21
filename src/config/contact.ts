@@ -1,5 +1,5 @@
 // ============================================================
-// Contact Configuration – Mob Atidol
+// Contact Configuration – AttilaMobDesign
 // Update these values to change contact information site-wide
 // ============================================================
 
@@ -12,8 +12,8 @@ export const CONTACT = {
   phoneTel: 'tel:+40746085700',
 
   // Email (from business banner)
-  email: 'attilamobdesign@gmail.com',
-  emailMailto: 'mailto:attilamobdesign@gmail.com',
+  email: 'csegoldiatila1969@gmail.com',
+  emailMailto: 'mailto:csegoldiatila1969@gmail.com',
 
   // Address (from business banner)
   address: 'str. M. Eminescu, nr 21',
@@ -23,7 +23,7 @@ export const CONTACT = {
   fullAddress: 'str. M. Eminescu, nr 21, Ocna Mureș, Alba, România',
 
   // Social media – UPDATE THESE when real URLs are available
-  facebook: 'https://www.facebook.com/PLACEHOLDER',  // TODO: Add real Facebook page URL
+  facebook: 'https://www.facebook.com/share/1E1DRsb8xn/',
   whatsapp: whatsappBase,
 
   // WhatsApp deep link with preset message

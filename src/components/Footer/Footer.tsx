@@ -12,11 +12,11 @@ export default function Footer() {
         <div className={styles.grid}>
           {/* Brand column */}
           <div className={styles.brand}>
-            <Link to="/" className={styles.logo} aria-label="Mob Atidol">
-              <span className={styles.logo__icon} aria-hidden="true">M</span>
+            <Link to="/" className={styles.logo} aria-label="AttilaMobDesign">
+              <span className={styles.logo__icon} aria-hidden="true">A</span>
               <span className={styles.logo__text}>
-                <span className={styles.logo__name}>Mob Atidol</span>
-                <span className={styles.logo__tagline}>Mobilier la comandă</span>
+                <span className={styles.logo__name}>AttilaMobDesign</span>
+                <span className={styles.logo__tagline}>MobAtidor</span>
               </span>
             </Link>
             <p className={styles.brand__desc}>
@@ -88,7 +88,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>© {currentYear} Mob Atidol. Toate drepturile rezervate.</p>
+          <p>© {currentYear} AttilaMobDesign. Toate drepturile rezervate.</p>
           <p className={styles.bottom__location}>{CONTACT.city}, {CONTACT.county}, {CONTACT.country}</p>
         </div>
       </div>

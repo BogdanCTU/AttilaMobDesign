@@ -117,24 +117,38 @@ export default function ContactSection() {
             </div>
             <div className={styles.locationContent}>
               <h3 className={styles.locationTitle}>Unde ne găsești</h3>
-              <p className={styles.locationName}>Mob Atidol – Mobilier la comandă</p>
+              <p className={styles.locationName}>AttilaMobDesign – MobAtidor</p>
               <address className={styles.locationAddress}>
                 {CONTACT.address}<br />
                 {CONTACT.city}, {CONTACT.county}<br />
                 {CONTACT.country}
               </address>
             </div>
-            <div className={styles.locationMapHint}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="3"/>
-                <path d="M12 8C9.8 8 8 9.8 8 12s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
-                <line x1="12" y1="2" x2="12" y2="5"/>
-                <line x1="12" y1="19" x2="12" y2="22"/>
-                <line x1="2" y1="12" x2="5" y2="12"/>
-                <line x1="19" y1="12" x2="22" y2="12"/>
-              </svg>
-              <span>Ocna Mureș, Alba, România</span>
-            </div>
+            <a
+              href="https://maps.app.goo.gl/GjYY3WF2LFeaSCBR6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.mapLink}
+              aria-label="Deschide locația în Google Maps"
+            >
+              <iframe
+                src="https://maps.google.com/maps?q=46.387636,23.863109&hl=ro&z=15&output=embed"
+                width="100%"
+                height="220"
+                style={{ border: 0, borderRadius: '0.75rem', display: 'block', pointerEvents: 'none' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Locația AttilaMobDesign pe Google Maps"
+              />
+              <span className={styles.mapOverlay}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" style={{width:18,height:18}}>
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                Deschide în Google Maps
+              </span>
+            </a>
           </div>
         </div>
       </div>
