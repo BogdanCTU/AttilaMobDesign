@@ -1,5 +1,6 @@
 import { useEffect, useCallback } from 'react'
 import type { GalleryImage } from '../../config/images'
+import { responsiveImage, SIZES } from '../../config/responsiveImage'
 import styles from './Lightbox.module.css'
 
 interface LightboxProps {
@@ -35,7 +36,13 @@ export default function Lightbox({ images, currentIndex, onClose, onPrev, onNext
   const handleTouchStart = (e: React.TouchEvent) => { touchStartX = e.touches[0].clientX }
   const handleTouchEnd = (e: React.TouchEvent) => {
     const diff = touchStartX - e.changedTouches[0].clientX
-    if (Math.abs(diff) > 50) { diff > 0 ? onNext() : onPrev() }
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        onNext()
+      } else {
+        onPrev()
+      }
+    }
   }
 
   return (
@@ -80,7 +87,7 @@ export default function Lightbox({ images, currentIndex, onClose, onPrev, onNext
         onTouchEnd={handleTouchEnd}
       >
         <img
-          src={current.src}
+          {...responsiveImage(current.src, SIZES.lightbox, { withDimensions: false })}
           alt={current.alt}
           className={styles.image}
           draggable={false}

@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react'
 import type { GalleryImage } from '../../config/images'
+import { responsiveImage, SIZES } from '../../config/responsiveImage'
 import Lightbox from '../Lightbox/Lightbox'
 import styles from './Gallery.module.css'
 
@@ -22,6 +23,7 @@ export default function Gallery({ images, columns = 3, showCount = 0 }: GalleryP
     setLightboxIndex((i) => (i === null ? null : (i + 1) % images.length)), [images.length])
 
   const colClass = columns === 2 ? styles.cols2 : columns === 4 ? styles.cols4 : styles.cols3
+  const sizes = columns === 4 ? SIZES.gallery4 : columns === 2 ? SIZES.card : SIZES.gallery3
 
   return (
     <>
@@ -35,7 +37,7 @@ export default function Gallery({ images, columns = 3, showCount = 0 }: GalleryP
             aria-label={`Deschide imaginea: ${img.alt}`}
           >
             <img
-              src={img.src}
+              {...responsiveImage(img.src, sizes)}
               alt={img.alt}
               loading="lazy"
               decoding="async"

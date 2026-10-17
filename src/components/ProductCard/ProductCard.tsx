@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { Category } from '../../config/images'
+import { responsiveImage, SIZES } from '../../config/responsiveImage'
 import styles from './ProductCard.module.css'
 
 interface ProductCardProps {
@@ -15,7 +16,7 @@ export default function ProductCard({ category }: ProductCardProps) {
     >
       <div className={styles.imgWrap}>
         <img
-          src={category.cardImage}
+          {...responsiveImage(category.cardImage, SIZES.card)}
           alt={category.name}
           loading="lazy"
           decoding="async"

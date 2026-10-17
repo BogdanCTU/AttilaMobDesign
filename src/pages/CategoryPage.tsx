@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { Category } from '../config/images'
+import { responsiveImage, SIZES } from '../config/responsiveImage'
 import { CONTACT } from '../config/contact'
 import Carousel from '../components/Carousel/Carousel'
 import Gallery from '../components/Gallery/Gallery'
@@ -11,6 +12,11 @@ interface CategoryPageProps {
 
 export default function CategoryPage({ category }: CategoryPageProps) {
   const hasMany = category.images.length > 6
+  // Dedicated (blurred) backgrounds are decorative; gallery photos keep their alt text.
+  const heroSrc = category.heroImage ?? category.images[0].src
+  const heroAlt = category.heroImage?.includes('/background/')
+    ? ''
+    : category.images.find((img) => img.src === heroSrc)?.alt ?? category.heading
 
   return (
     <div className={styles.page}>
@@ -18,8 +24,8 @@ export default function CategoryPage({ category }: CategoryPageProps) {
       <div className={styles.hero}>
         <div className={styles.heroBg}>
           <img
-            src={category.images[0].src}
-            alt={category.images[0].alt}
+            {...responsiveImage(heroSrc, SIZES.fullWidth)}
+            alt={heroAlt}
             loading="eager"
             className={styles.heroBgImg}
           />

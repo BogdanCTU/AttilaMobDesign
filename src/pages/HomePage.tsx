@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { CATEGORIES, HOME_GALLERY_IMAGES, HERO_IMAGE } from '../config/images'
+import { CATEGORIES, HOME_GALLERY_IMAGES, HERO_IMAGE, ABOUT_IMAGES, CTA_BANNER_IMAGE } from '../config/images'
+import { responsiveImage, SIZES } from '../config/responsiveImage'
 import { CONTACT } from '../config/contact'
 import ProductCard from '../components/ProductCard/ProductCard'
 import Gallery from '../components/Gallery/Gallery'
@@ -14,7 +15,7 @@ export default function HomePage() {
       <section className={styles.hero} aria-label="Secțiunea principală">
         <div className={styles.heroBg}>
           <img
-            src={HERO_IMAGE}
+            {...responsiveImage(HERO_IMAGE, SIZES.fullWidth)}
             alt="Bucătărie personalizată la comandă – Mob Atidol"
             className={styles.heroBgImg}
             loading="eager"
@@ -60,16 +61,18 @@ export default function HomePage() {
             <div className={styles.aboutImages}>
               <div className={styles.aboutImgMain}>
                 <img
-                  src="./images/kitchen/Proiect_11_1.jpg"
-                  alt="Bucătărie modernă realizată de Mob Atidol"
+                  {...responsiveImage(ABOUT_IMAGES.main.src, SIZES.aboutMain)}
+                  alt={ABOUT_IMAGES.main.alt}
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className={styles.aboutImgSecond}>
                 <img
-                  src="./images/bedroom/Proiect_6_1.jpg"
-                  alt="Dormitor personalizat realizat de Mob Atidol"
+                  {...responsiveImage(ABOUT_IMAGES.second.src, SIZES.aboutSecond)}
+                  alt={ABOUT_IMAGES.second.alt}
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className={styles.aboutAccentCard} aria-hidden="true">
@@ -162,10 +165,11 @@ export default function HomePage() {
       <section className={styles.ctaBanner} aria-label="Cere o ofertă">
         <div className={styles.ctaBannerBg}>
           <img
-            src="./images/kitchen/Proiect_23_1.jpg"
+            {...responsiveImage(CTA_BANNER_IMAGE, SIZES.fullWidth)}
             alt=""
             aria-hidden="true"
             loading="lazy"
+            decoding="async"
             className={styles.ctaBannerImg}
           />
           <div className={styles.ctaBannerOverlay} />

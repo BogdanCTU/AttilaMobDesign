@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
 import type { GalleryImage } from '../../config/images'
+import { responsiveImage, SIZES } from '../../config/responsiveImage'
 import Lightbox from '../Lightbox/Lightbox'
 import styles from './Carousel.module.css'
 
@@ -32,7 +33,13 @@ export default function Carousel({ images, autoPlay = false, autoPlayInterval = 
   const handleTouchStart = (e: React.TouchEvent) => { touchStartX.current = e.touches[0].clientX }
   const handleTouchEnd = (e: React.TouchEvent) => {
     const diff = touchStartX.current - e.changedTouches[0].clientX
-    if (Math.abs(diff) > 50) { diff > 0 ? next() : prev() }
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        next()
+      } else {
+        prev()
+      }
+    }
   }
 
   return (
@@ -49,7 +56,7 @@ export default function Carousel({ images, autoPlay = false, autoPlayInterval = 
         {/* Main image */}
         <div className={styles.main}>
           <img
-            src={images[currentIndex].src}
+            {...responsiveImage(images[currentIndex].src, SIZES.carousel)}
             alt={images[currentIndex].alt}
             className={styles.mainImg}
             loading="lazy"
@@ -88,7 +95,7 @@ export default function Carousel({ images, autoPlay = false, autoPlayInterval = 
               aria-selected={i === currentIndex}
               aria-label={`Imaginea ${i + 1}: ${img.alt}`}
             >
-              <img src={img.src} alt="" loading="lazy" decoding="async" />
+              <img {...responsiveImage(img.src, SIZES.thumb)} alt="" loading="lazy" decoding="async" />
             </button>
           ))}
         </div>
