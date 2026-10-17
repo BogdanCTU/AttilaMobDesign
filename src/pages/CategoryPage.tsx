@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import type { Category } from '../config/images'
 import { responsiveImage, SIZES } from '../config/responsiveImage'
@@ -11,6 +12,9 @@ interface CategoryPageProps {
 }
 
 export default function CategoryPage({ category }: CategoryPageProps) {
+  useEffect(() => {
+    document.title = `${category.name} la comandă | AttilaMobDesign – MobAtidor`
+  }, [category])
   const hasMany = category.images.length > 6
   // Dedicated (blurred) backgrounds are decorative; gallery photos keep their alt text.
   const heroSrc = category.heroImage ?? category.images[0].src

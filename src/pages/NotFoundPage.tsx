@@ -1,7 +1,11 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './NotFoundPage.module.css'
 
 export default function NotFoundPage() {
+  useEffect(() => {
+    document.title = 'Pagina nu a fost găsită (404) | AttilaMobDesign'
+  }, [])
   return (
     <div className={styles.page}>
       <div className="container">

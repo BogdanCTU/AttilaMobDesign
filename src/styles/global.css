@@ -83,6 +83,28 @@ ul, ol { list-style: none; }
   border-radius: var(--radius-xs);
 }
 
+/* Accessibility skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-4);
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  z-index: 9999;
+  text-decoration: none;
+  transition: top var(--transition-fast);
+  box-shadow: var(--shadow-lg);
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
 /* Layout utilities */
 .container {
   width: 100%;

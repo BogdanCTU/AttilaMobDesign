@@ -148,9 +148,9 @@
 
 .bottom p {
   font-size: var(--text-xs);
-  color: rgba(248, 242, 220, 0.45);
+  color: rgba(248, 242, 220, 0.75);
 }
 
 .bottom__location {
-  color: rgba(248, 242, 220, 0.45) !important;
+  color: rgba(248, 242, 220, 0.75) !important;
 }

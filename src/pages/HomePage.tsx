@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CATEGORIES, HOME_GALLERY_IMAGES, HERO_IMAGE, ABOUT_IMAGES, CTA_BANNER_IMAGE } from '../config/images'
 import { responsiveImage, SIZES } from '../config/responsiveImage'
@@ -9,6 +10,10 @@ import ContactSection from '../components/ContactSection/ContactSection'
 import styles from './HomePage.module.css'
 
 export default function HomePage() {
+  useEffect(() => {
+    document.title = 'AttilaMobDesign – MobAtidor | Mobilier la comandă Ocna Mureș'
+  }, [])
+
   return (
     <>
       {/* ── Hero ────────────────────────────────────────── */}

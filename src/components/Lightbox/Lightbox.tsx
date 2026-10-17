@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react'
+import { useEffect, useCallback, useRef } from 'react'
 import type { GalleryImage } from '../../config/images'
 import { responsiveImage, SIZES } from '../../config/responsiveImage'
 import styles from './Lightbox.module.css'
@@ -13,6 +13,11 @@ interface LightboxProps {
 
 export default function Lightbox({ images, currentIndex, onClose, onPrev, onNext }: LightboxProps) {
   const current = images[currentIndex]
+  const closeBtnRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    closeBtnRef.current?.focus()
+  }, [])
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     switch (e.key) {
@@ -59,7 +64,7 @@ export default function Lightbox({ images, currentIndex, onClose, onPrev, onNext
       </div>
 
       {/* Close button */}
-      <button className={styles.closeBtn} onClick={onClose} aria-label="Închide galeria">
+      <button ref={closeBtnRef} className={styles.closeBtn} onClick={onClose} aria-label="Închide galeria">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
           <line x1="18" y1="6" x2="6" y2="18"/>
           <line x1="6" y1="6" x2="18" y2="18"/>

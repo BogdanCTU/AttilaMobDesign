@@ -1,9 +1,13 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CATEGORIES } from '../config/images'
 import ProductCard from '../components/ProductCard/ProductCard'
 import styles from './ProductsPage.module.css'
 
 export default function ProductsPage() {
+  useEffect(() => {
+    document.title = 'Produse & Portofoliu | AttilaMobDesign – MobAtidor'
+  }, [])
   return (
     <div className={styles.page}>
       {/* Page header */}

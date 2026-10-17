@@ -42,6 +42,16 @@ export default function Carousel({ images, autoPlay = false, autoPlayInterval = 
     }
   }
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault()
+      prev()
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault()
+      next()
+    }
+  }
+
   return (
     <>
       <div
@@ -49,8 +59,10 @@ export default function Carousel({ images, autoPlay = false, autoPlayInterval = 
         onMouseEnter={pauseAutoPlay}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
+        onKeyDown={handleKeyDown}
+        tabIndex={0}
         role="region"
-        aria-label="Carusel proiecte"
+        aria-label="Carusel proiecte (folosiți săgețile stânga/dreapta pentru navigare)"
         aria-roledescription="carousel"
       >
         {/* Main image */}

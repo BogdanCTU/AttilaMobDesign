@@ -11,9 +11,12 @@ import ScrollToTop from './components/ScrollToTop'
 function App() {
   return (
     <HashRouter>
+      <a href="#main-content" className="skip-link">
+        Sari la conținutul principal
+      </a>
       <ScrollToTop />
       <Header />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/produse" element={<ProductsPage />} />
