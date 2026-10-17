@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { CATEGORIES } from '../config/images'
 import ProductCard from '../components/ProductCard/ProductCard'
 import styles from './ProductsPage.module.css'
@@ -9,7 +10,7 @@ export default function ProductsPage() {
       <div className={styles.header}>
         <div className="container">
           <div className={styles.breadcrumb} aria-label="Navigare ierarhică">
-            <a href="/" className={styles.breadcrumbLink}>Acasă</a>
+            <Link to="/" className={styles.breadcrumbLink}>Acasă</Link>
             <span aria-hidden="true">›</span>
             <span aria-current="page">Produse</span>
           </div>

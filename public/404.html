@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <title>Mob Atidol – Mobilier la comandă</title>
     <script>
-      // GitHub Pages SPA redirect: store the path in sessionStorage and redirect to home
-      var l = window.location;
-      var path = l.pathname.slice(1);
-      var query = l.search.slice(1);
-      var hash = l.hash.slice(1);
-      sessionStorage.setItem(
-        'ghpages-redirect',
-        JSON.stringify({ path: path, query: query, hash: hash })
-      );
-      l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/');
+      // GitHub Pages SPA redirect for HashRouter:
+      // Converts direct path requests into hash routes, seamlessly supporting:
+      // - Custom domain:     https://mobatidor.ro/produse            -> https://mobatidor.ro/#/produse
+      // - Project subdomain: https://bogdanctu.github.io/AttilaMobDesign/produse -> https://bogdanctu.github.io/AttilaMobDesign/#/produse
+      (function() {
+        var l = window.location;
+        var pathname = l.pathname;
+        var repo = '/AttilaMobDesign';
+        var base = pathname.startsWith(repo) ? repo + '/' : '/';
+        var route = pathname.startsWith(repo) ? pathname.slice(repo.length) : pathname;
+        if (route.startsWith('/')) route = route.slice(1);
+        var target = l.protocol + '//' + l.host + base + (route ? '#/' + route : '') + l.search + l.hash;
+        l.replace(target);
+      })();
     </script>
   </head>
   <body>
