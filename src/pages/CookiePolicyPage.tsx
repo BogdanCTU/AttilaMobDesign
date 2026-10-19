@@ -75,7 +75,7 @@ export default function CookiePolicyPage() {
               </a>.
             </li>
             <li className={styles.listItem}>
-              <strong>Google Fonts:</strong> Fonturile vizuale ale paginii sunt livrate prin Google Fonts. Conform documentației tehnice oficiale a Google, API-ul Google Fonts nu instalează și nu utilizează module cookie în browserul utilizatorilor, iar cererile de descărcare a fișierelor de font sunt neautentificate.
+              <strong>Google Fonts (Găzduire locală):</strong> Fonturile vizuale utilizate pe site (<em>Playfair Display</em> și <em>Inter</em>) sunt găzduite local direct pe serverul nostru. La accesarea paginilor nu se realizează conexiuni către serverele externe Google Fonts și nu se instalează module cookie pe dispozitivul dumneavoastră.
             </li>
             <li className={styles.listItem}>
               <strong>Linkuri către rețele sociale (WhatsApp, Facebook):</strong> Butoanele către WhatsApp și pagina de Facebook sunt simple legături web (linkuri externe). La simpla navigare pe mobatidor.ro nu sunt plasate cookie-uri de către WhatsApp sau Facebook; la accesarea linkului, se deschid aplicațiile sau paginile respective, guvernate de politicile Meta Platforms.
