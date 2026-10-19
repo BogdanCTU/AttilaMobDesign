@@ -5,7 +5,7 @@ import styles from './PolicyPage.module.css'
 
 export default function CookiePolicyPage() {
   useEffect(() => {
-    document.title = 'Politica de Cookies | AttilaMobDesign – MobAtidor'
+    document.title = 'Politica de Cookies | MOBATIDOR SRL'
     window.scrollTo(0, 0)
   }, [])
 
@@ -122,11 +122,15 @@ export default function CookiePolicyPage() {
         <section className={styles.card} aria-labelledby="sec-contact-cookies">
           <h2 id="sec-contact-cookies" className={styles.cardTitle}>6. Întrebări și Contact</h2>
           <p className={styles.paragraph}>
-            Dacă aveți întrebări suplimentare cu privire la modul în care este administrat acest site web, ne puteți contacta la:
+            Dacă aveți întrebări suplimentare cu privire la modul în care este administrat acest site web de către <strong>{CONTACT.legalName}</strong>, ne puteți contacta la:
           </p>
-          <p className={styles.paragraph}>
-            Email: <a href={CONTACT.emailMailto}>{CONTACT.email}</a> | Telefon: <a href={CONTACT.phoneTel}>{CONTACT.phone}</a> | Adresă: {CONTACT.fullAddress}
-          </p>
+          <ul className={styles.list}>
+            <li className={styles.listItem}><strong>Operator:</strong> {CONTACT.legalName} (CUI: {CONTACT.cui}, Reg. Com.: {CONTACT.regCom})</li>
+            <li className={styles.listItem}><strong>Email:</strong> <a href={CONTACT.emailMailto}>{CONTACT.email}</a></li>
+            <li className={styles.listItem}><strong>Telefon:</strong> <a href={CONTACT.phoneTel}>{CONTACT.phone}</a></li>
+            <li className={styles.listItem}><strong>Sediu social:</strong> {CONTACT.registeredOffice}</li>
+            <li className={styles.listItem}><strong>Atelier:</strong> {CONTACT.fullAddress}</li>
+          </ul>
         </section>
 
         {/* Bottom navigation card */}

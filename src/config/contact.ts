@@ -7,6 +7,14 @@ const whatsappBase = 'https://wa.me/40746085700'
 const whatsappMessage = 'Bună ziua! Aș dori informații despre mobilier la comandă.'
 
 export const CONTACT = {
+  // Legal entity details
+  legalName: 'MOBATIDOR SRL',
+  cui: '41620123',
+  regCom: 'J01/1530/2019',
+  euid: 'ROONRC.J1/1530/2019',
+  registeredOffice: 'Sat Gura Arieșului, nr. 152, jud. Alba, România, cod poștal 517406',
+  contactPerson: 'Attila Csegoldi',
+
   // Phone (from business banner)
   phone: '0746 085 700',
   phoneTel: 'tel:+40746085700',
@@ -15,7 +23,7 @@ export const CONTACT = {
   email: 'csegoldiatila1969@gmail.com',
   emailMailto: 'mailto:csegoldiatila1969@gmail.com',
 
-  // Address (from business banner)
+  // Address (workshop location)
   address: 'str. M. Eminescu, nr 21',
   city: 'Ocna Mureș',
   county: 'Alba',
