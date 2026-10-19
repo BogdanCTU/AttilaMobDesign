@@ -69,13 +69,13 @@ export default function CookiePolicyPage() {
           </p>
           <ul className={styles.list}>
             <li className={styles.listItem}>
-              <strong>Google Maps:</strong> În secțiunea „Contact”, pentru a vă arăta amplasamentul fizic al atelierului din Ocna Mureș, este încorporat un cadru de hartă (iframe) furnizat de Google LLC. La afișarea hărții, browserul realizează conexiuni directe către serverele Google (<code>maps.google.com</code>). În funcție de setările browserului dvs. și de existența unei conectări prealabile într-un cont Google, Google poate prelucra date tehnice (cum ar fi adresa IP) sau poate accesa module cookie conform propriei sale politici. Detalii complete sunt disponibile în{' '}
+              <strong>Google Maps – Încărcare la cerere (Soluție 2-Click):</strong> Pentru a vă proteja confidențialitatea, pe site-ul nostru harta Google Maps <strong>nu se încarcă automat</strong> la accesarea paginii. Nicio conexiune și nicio solicitare tehnică nu este transmisă către Google Maps până când nu alegeți în mod expres să apăsați pe butonul <em>„Afișează harta interactivă”</em> din secțiunea Contact sau să deschideți linkul extern. Doar după ce confirmați afișarea, Google LLC poate prelucra adresa dumneavoastră IP și poate aplica politicile proprii accesibile în{' '}
               <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">
                 Politica privind cookie-urile Google
               </a>.
             </li>
             <li className={styles.listItem}>
-              <strong>Google Fonts:</strong> Fonturile vizuale ale paginii sunt livrate de Google Fonts. Google Fonts nu plasează cookie-uri pe dispozitivul dvs., însă la descărcarea fonturilor se realizează o interogare tehnică HTTP către <code>fonts.googleapis.com</code>.
+              <strong>Google Fonts:</strong> Fonturile vizuale ale paginii sunt livrate prin Google Fonts. Conform documentației tehnice oficiale a Google, API-ul Google Fonts nu instalează și nu utilizează module cookie în browserul utilizatorilor, iar cererile de descărcare a fișierelor de font sunt neautentificate.
             </li>
             <li className={styles.listItem}>
               <strong>Linkuri către rețele sociale (WhatsApp, Facebook):</strong> Butoanele către WhatsApp și pagina de Facebook sunt simple legături web (linkuri externe). La simpla navigare pe mobatidor.ro nu sunt plasate cookie-uri de către WhatsApp sau Facebook; la accesarea linkului, se deschid aplicațiile sau paginile respective, guvernate de politicile Meta Platforms.

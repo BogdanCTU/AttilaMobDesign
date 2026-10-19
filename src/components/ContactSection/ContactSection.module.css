@@ -157,41 +157,75 @@
   line-height: 1.8;
 }
 
-.mapLink {
-  display: block;
-  position: relative;
+.mapConsentPlaceholder {
+  background: var(--color-bg);
+  border: 1px dashed var(--color-border);
   border-radius: var(--radius-md);
-  overflow: hidden;
-  text-decoration: none;
-  cursor: pointer;
+  padding: var(--space-6) var(--space-5);
+  margin-top: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 220px;
+}
+
+.mapConsentContent {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.mapConsentText {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.mapConsentActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.mapExternalLink {
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-base);
+  margin-top: var(--space-1);
+}
+
+.mapExternalLink:hover {
+  color: var(--color-primary-dark);
+}
+
+.mapWrap {
   margin-top: var(--space-2);
 }
 
-.mapLink iframe {
+.mapWrap iframe {
   display: block;
   width: 100%;
   border: none;
   border-radius: var(--radius-md);
 }
 
-.mapOverlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: var(--space-3);
-  background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 50%);
-  color: white;
-  font-size: var(--text-sm);
-  font-weight: 600;
-  gap: var(--space-2);
-  opacity: 0;
-  transition: opacity var(--transition-base);
-  border-radius: var(--radius-md);
-  pointer-events: none;
+.mapExternalLinkAfter {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-.mapLink:hover .mapOverlay {
-  opacity: 1;
+.mapExternalLinkAfter:hover {
+  color: var(--color-primary-dark);
 }
