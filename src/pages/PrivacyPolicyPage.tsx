@@ -201,14 +201,14 @@ export default function PrivacyPolicyPage() {
             Conform documentației oficiale GitHub (<em>About GitHub Pages</em> și <em>GitHub Global Privacy Statement</em>), furnizorul de găzduire poate colecta automat adrese IP și detalii tehnice de solicitare pentru a asigura securitatea platformei și pentru îndeplinirea obligațiilor sale legale. Operatorul MOBATIDOR SRL nu deține acces direct la fișiere detaliate de jurnale de server și nu utilizează aceste date pentru identificarea vizitatorilor.
           </p>
           <p className={styles.paragraph}>
-            În ceea ce privește transferul internațional al datelor de conexiune către serverele GitHub din SUA: Microsoft Corporation (și filialele sale din SUA, inclusiv GitHub, Inc.) este certificată în cadrul <strong>Cadrului de confidențialitate a datelor UE-SUA (EU-U.S. Data Privacy Framework)</strong>, conform registrului oficial administrat de Departamentul Comerțului din SUA. De asemenea, termenii standard GitHub încorporează <strong>Clauzele Contractuale Standard (SCC)</strong> aprobate de Comisia Europeană. Menționăm că găzduirea pe GitHub Pages funcționează pe baza termenilor standard online ai furnizorului.
+            În ceea ce privește transferul internațional al datelor de conexiune către serverele din SUA: entitatea furnizoare <strong>GitHub, Inc.</strong> deține o certificare proprie și independentă în cadrul <strong>Cadrului de confidențialitate a datelor UE-SUA (EU-U.S. Data Privacy Framework)</strong>, verificabilă în registrul oficial administrat de Departamentul Comerțului din SUA (DPF Participant Search), aplicându-se totodată <strong>Clauzele Contractuale Standard (SCC)</strong> ale Comisiei Europene integrate în acordul de prelucrare a datelor GitHub. Găzduirea statică gratuită prin GitHub Pages funcționează pe baza termenilor standard online ai furnizorului.
           </p>
           <p className={styles.paragraph}>
             <strong>Alți destinatari / împuterniciți:</strong>
           </p>
           <ul className={styles.list}>
             <li className={styles.listItem}>
-              <strong>Google Ireland Limited / Google LLC:</strong> Pentru căsuța de email de contact (Gmail) și pentru afișarea hărții Google Maps dacă activați opțiunea 2-click. Google LLC este certificată în cadrul EU-U.S. Data Privacy Framework.
+              <strong>Google Ireland Limited / Google LLC:</strong> Pentru căsuța de email de contact (Gmail) și pentru afișarea hărții Google Maps exclusiv atunci când activați opțiunea 2-click. Entitatea <strong>Google LLC</strong> deține propria certificare activă în cadrul EU-U.S. Data Privacy Framework pentru transferurile de date tehnice către serverele sale din SUA.
             </li>
             <li className={styles.listItem}>
               <strong>Platforme externe de comunicare:</strong> WhatsApp Ireland Limited și Meta Platforms Ireland Limited, exclusiv în măsura în care alegeți voluntar să inițiați contactul prin aceste canale.
@@ -245,6 +245,11 @@ export default function PrivacyPolicyPage() {
               <strong>Garanția produselor și eventuale litigii:</strong> Datele strict necesare atestării calității și soluționării cererilor de garanție se păstrează pe durata termenului de garanție convenit în contractul individual sau certificatul de garanție emis pentru piesa de mobilier. În cazul unor pretenții contractuale sau litigii potențiale, documentele strict necesare apărării drepturilor pot fi păstrate ținând cont de termenul general de prescripție extinctivă de <strong>3 ani</strong> prevăzut de <strong>Art. 2517 din Codul civil (Legea nr. 287/2009)</strong>, termen care curge de la data la care se naște dreptul la acțiune (de exemplu, data predării mobilierului sau apariția neconformității), iar în cazul declanșării unei proceduri judiciare, până la soluționarea definitivă a acesteia.
             </li>
           </ul>
+          <div className={styles.callout}>
+            <p>
+              <strong>Notă privind evidențele contabile:</strong> Termenele concrete de arhivare aplicabile diferitelor categorii de documente justificative, registre și raportări fiscale ale societății sunt stabilite și validate periodic în strânsă colaborare cu <strong>expertul contabil autorizat</strong> al MOBATIDOR SRL, în conformitate cu legislația contabilă și fiscală din România.
+            </p>
+          </div>
         </section>
 
         {/* 7. Cookies și browser storage */}
