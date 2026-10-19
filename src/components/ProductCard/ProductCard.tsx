@@ -8,6 +8,13 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ category }: ProductCardProps) {
+  const cardAlt =
+    category.slug === 'altele'
+      ? 'Mobilier personalizat la comandă – proiecte speciale'
+      : category.slug === 'afaceri'
+      ? 'Mobilier pentru afaceri și spații comerciale la comandă'
+      : `Mobilier ${category.name.toLowerCase()} la comandă`
+
   return (
     <Link
       to={`/produse/${category.slug}`}
@@ -17,7 +24,7 @@ export default function ProductCard({ category }: ProductCardProps) {
       <div className={styles.imgWrap}>
         <img
           {...responsiveImage(category.cardImage, SIZES.card)}
-          alt={category.name}
+          alt={cardAlt}
           loading="lazy"
           decoding="async"
           className={styles.img}

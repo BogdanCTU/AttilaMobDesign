@@ -11,7 +11,14 @@ import styles from './HomePage.module.css'
 
 export default function HomePage() {
   useEffect(() => {
-    document.title = 'AttilaMobDesign – MobAtidor | Mobilier la comandă Ocna Mureș'
+    document.title = 'Mobilier la Comandă Ocna Mureș și Alba | MobAtidor'
+    const metaDesc = document.querySelector('meta[name="description"]')
+    if (metaDesc) {
+      metaDesc.setAttribute(
+        'content',
+        'Mobilier la comandă în Ocna Mureș și județul Alba. Realizăm mobilă personalizată pentru bucătării, dormitoare, livinguri și afaceri. Producător local MobAtidor.'
+      )
+    }
   }, [])
 
   return (
@@ -21,7 +28,7 @@ export default function HomePage() {
         <div className={styles.heroBg}>
           <img
             {...responsiveImage(HERO_IMAGE, SIZES.fullWidth)}
-            alt="Bucătărie personalizată la comandă – Mob Atidol"
+            alt="Mobilier bucătărie la comandă realizat în atelierul MobAtidor din Ocna Mureș, Alba"
             className={styles.heroBgImg}
             loading="eager"
           />
@@ -33,11 +40,11 @@ export default function HomePage() {
             Ocna Mureș, Alba, România
           </div>
           <h1 className={styles.heroTitle}>
-            Mobilier la comandă,<br />
-            <em>exact cum îți dorești.</em>
+            Mobilier la comandă în Ocna Mureș<br />
+            <em>și județul Alba</em>
           </h1>
           <p className={styles.heroDesc}>
-            Realizăm mobilier personalizat pentru locuințe și spații profesionale, adaptat dimensiunilor, stilului și cerințelor fiecărui proiect.
+            Proiectăm și executăm mobilier personalizat pentru locuințe și spații profesionale, adaptat la dimensiunile, stilul și cerințele fiecărui spațiu din Ocna Mureș și județul Alba.
           </p>
           <div className={styles.heroCtas}>
             <Link to="/produse" className="btn btn--primary btn--lg">
@@ -94,20 +101,20 @@ export default function HomePage() {
             <div className={styles.aboutText}>
               <span className="section-header__eyebrow">Despre noi</span>
               <h2 className={styles.aboutTitle} id="about-heading">
-                Atelierul nostru din Ocna Mureș
+                Atelier de mobilier la comandă în Ocna Mureș
               </h2>
               <div className={styles.aboutDivider} />
               <p className={styles.aboutPara}>
-                Atelierul nostru din Ocna Mureș produce mobilier personalizat, adaptat cerințelor fiecărui client.
+                Cu atelierul situat pe strada Mihai Eminescu din Ocna Mureș, MobAtidor (MOBATIDOR SRL) este producătorul tău local de mobilier la comandă. Realizăm piese unice pentru locuințe și spații profesionale din Ocna Mureș și din tot județul Alba, punând accent pe calitate, precizie și durabilitate.
               </p>
               <p className={styles.aboutPara}>
-                Utilizăm materiale de calitate și soluții moderne pentru a crea piese durabile, estetice și funcționale, destinate locuințelor și spațiilor profesionale.
+                Fie că îți dorești mobilier de bucătărie modern și ergonomic, un dormitor confortabil cu pat tapițat și dulap generos, un living primitor sau mobilier profesional pentru afacerea ta, adaptăm fiecare proiect exact la dimensiunile și configurația spațiului tău.
               </p>
               <p className={styles.aboutPara}>
-                Oferim implicare completă în fiecare proiect, de la concept până la realizarea produsului final.
+                Lucrăm cu materiale rezistente și feronerie de înaltă calitate pentru o funcționare impecabilă în timp. Oferim servicii complete pentru orice proiect de mobilier în Alba: de la consultanță inițială și proiectare personalizată, până la producție în atelier, transport și montaj atent la destinație.
               </p>
               <div className={styles.aboutFeatures}>
-                {['Materiale de calitate', 'Design personalizat', 'Montaj inclus', 'Soluții moderne'].map((f) => (
+                {['Materiale de calitate', 'Proiectare personalizată', 'Montaj inclus', 'Producător local Alba'].map((f) => (
                   <div key={f} className={styles.aboutFeature}>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                       <polyline points="20,6 9,17 4,12"/>
