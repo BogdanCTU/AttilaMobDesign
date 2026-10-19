@@ -4,6 +4,8 @@ import Footer from './components/Footer/Footer'
 import HomePage from './pages/HomePage'
 import ProductsPage from './pages/ProductsPage'
 import CategoryPage from './pages/CategoryPage'
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
+import CookiePolicyPage from './pages/CookiePolicyPage'
 import NotFoundPage from './pages/NotFoundPage'
 import { CATEGORIES } from './config/images'
 import ScrollToTop from './components/ScrollToTop'
@@ -27,6 +29,8 @@ function App() {
               element={<CategoryPage category={cat} />}
             />
           ))}
+          <Route path="/politica-de-confidentialitate" element={<PrivacyPolicyPage />} />
+          <Route path="/politica-de-cookies" element={<CookiePolicyPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

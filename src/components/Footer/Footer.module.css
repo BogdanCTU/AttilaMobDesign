@@ -151,6 +151,31 @@
   color: rgba(248, 242, 220, 0.75);
 }
 
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.legalLink {
+  color: rgba(248, 242, 220, 0.75);
+  font-size: var(--text-xs);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-base);
+}
+
+.legalLink:hover {
+  color: var(--color-secondary);
+}
+
+.legalDivider {
+  color: rgba(248, 242, 220, 0.35);
+  font-size: var(--text-xs);
+}
+
 .bottom__location {
   color: rgba(248, 242, 220, 0.75) !important;
 }
+

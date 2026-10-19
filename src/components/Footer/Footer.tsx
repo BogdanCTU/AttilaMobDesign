@@ -89,6 +89,15 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>© {currentYear} AttilaMobDesign. Toate drepturile rezervate.</p>
+          <nav className={styles.legalLinks} aria-label="Informații legale și confidențialitate">
+            <Link to="/politica-de-confidentialitate" className={styles.legalLink}>
+              Politica de confidențialitate
+            </Link>
+            <span className={styles.legalDivider} aria-hidden="true">•</span>
+            <Link to="/politica-de-cookies" className={styles.legalLink}>
+              Politica de cookies
+            </Link>
+          </nav>
           <p className={styles.bottom__location}>{CONTACT.city}, {CONTACT.county}, {CONTACT.country}</p>
         </div>
       </div>
