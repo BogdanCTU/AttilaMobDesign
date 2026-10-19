@@ -39,18 +39,15 @@
   margin-bottom: var(--space-4);
 }
 
-.logo__icon {
+.logo__img {
   width: 44px;
   height: 44px;
-  background: var(--color-primary);
-  color: var(--color-text-on-primary);
+  object-fit: contain;
   border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: var(--text-xl);
-  font-weight: 700;
+  background: #FFFFFF;
+  padding: 2px;
+  border: 1px solid rgba(248, 242, 220, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
 }
 

@@ -159,3 +159,7 @@ export const ABOUT_IMAGES = {
 
 // CTA banner background (decorative)
 export const CTA_BANNER_IMAGE = BG.kitchenWarm
+
+// ── Business logo ─────────────────────────────────────────────
+export const BUSINESS_LOGO = './images/MobAtidorLogo.png'
+

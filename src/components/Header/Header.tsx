@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
+import { BUSINESS_LOGO } from '../../config/images'
 import styles from './Header.module.css'
 
 const NAV_LINKS = [
@@ -51,8 +52,14 @@ export default function Header() {
       <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`} role="banner">
         <div className={`container ${styles.inner}`}>
           {/* Logo */}
-          <Link to="/" className={styles.logo} aria-label="AttilaMobDesign – Acasă">
-            <span className={styles.logo__icon} aria-hidden="true">A</span>
+          <Link to="/" className={styles.logo} aria-label="AttilaMobDesign – MobAtidor – Acasă">
+            <img
+              src={BUSINESS_LOGO}
+              alt="MobAtidor Logo"
+              className={styles.logo__img}
+              width="40"
+              height="40"
+            />
             <span className={styles.logo__text}>
               <span className={styles.logo__brand}>AttilaMobDesign</span>
               <span className={styles.logo__tagline}>MobAtidor</span>

@@ -34,18 +34,15 @@
   flex-shrink: 0;
 }
 
-.logo__icon {
+.logo__img {
   width: 40px;
   height: 40px;
-  background: var(--color-primary);
-  color: var(--color-text-on-primary);
+  object-fit: contain;
   border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: var(--text-xl);
-  font-weight: 700;
+  background: #FFFFFF;
+  padding: 2px;
+  border: 1px solid rgba(143, 84, 52, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   flex-shrink: 0;
 }
 

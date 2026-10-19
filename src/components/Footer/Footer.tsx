@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { CONTACT } from '../../config/contact'
-import { CATEGORIES } from '../../config/images'
+import { CATEGORIES, BUSINESS_LOGO } from '../../config/images'
 import styles from './Footer.module.css'
 
 const currentYear = new Date().getFullYear()
@@ -12,8 +12,14 @@ export default function Footer() {
         <div className={styles.grid}>
           {/* Brand column */}
           <div className={styles.brand}>
-            <Link to="/" className={styles.logo} aria-label="AttilaMobDesign">
-              <span className={styles.logo__icon} aria-hidden="true">A</span>
+            <Link to="/" className={styles.logo} aria-label="AttilaMobDesign – MobAtidor">
+              <img
+                src={BUSINESS_LOGO}
+                alt="MobAtidor Logo"
+                className={styles.logo__img}
+                width="44"
+                height="44"
+              />
               <span className={styles.logo__text}>
                 <span className={styles.logo__name}>AttilaMobDesign</span>
                 <span className={styles.logo__tagline}>MobAtidor</span>
